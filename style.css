@@ -738,7 +738,7 @@ select.form-control {
 }
 
 /* END PERPLEXITY DESIGN SYSTEM */
-/* Neo-brutalism AI Ethics Lab Styles - Complete Fixed Version */
+/* Neo-brutalism AI Ethics Lab Styles - Complete Fixed Version with Visuals */
 
 /* Override design system for neo-brutalism theme */
 :root {
@@ -1112,6 +1112,235 @@ body {
   text-transform: uppercase;
 }
 
+/* Visual Elements for Case Studies */
+.visual-header {
+  margin-bottom: 20px;
+}
+
+.case-study-visual {
+  background-color: var(--neo-white);
+  border: var(--border-medium);
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: var(--shadow-small);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.case-study-image {
+  max-width: 100%;
+  height: auto;
+  border: var(--border-thin);
+  box-shadow: var(--shadow-small);
+  max-height: 200px;
+  object-fit: contain;
+}
+
+/* Ethics vs Morals Visual */
+.global-moderation-icons {
+  text-align: center;
+}
+
+.icon-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.arrow {
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.culture-flags {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 15px 0;
+  font-size: 2rem;
+}
+
+.ethics-label {
+  background-color: var(--neo-pink);
+  color: var(--neo-black);
+  padding: 8px 15px;
+  border: var(--border-thin);
+  font-weight: 900;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+/* Data Privacy Visual */
+.data-flow-diagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.flow-step {
+  background-color: var(--neo-yellow);
+  border: var(--border-thin);
+  padding: 8px 12px;
+  font-weight: 900;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.arrow-right {
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: var(--neo-black);
+}
+
+/* Misinformation Visual */
+.deepfake-warning {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.warning-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+.real-icon {
+  background-color: var(--neo-green);
+  padding: 8px 12px;
+  border: var(--border-thin);
+}
+
+.fake-icon {
+  background-color: var(--neo-pink);
+  padding: 8px 12px;
+  border: var(--border-thin);
+}
+
+.vs {
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.detection-note {
+  background-color: var(--neo-yellow);
+  color: var(--neo-black);
+  padding: 6px 12px;
+  border: var(--border-thin);
+  font-weight: 900;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+/* Loss of Control Visual */
+.flash-crash-chart {
+  text-align: center;
+  width: 100%;
+}
+
+.chart-header {
+  background-color: var(--neo-pink);
+  color: var(--neo-black);
+  padding: 10px;
+  border: var(--border-thin);
+  font-weight: 900;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.chart-container {
+  background-color: var(--neo-white);
+  border: var(--border-thin);
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.price-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.crash-arrow,
+.recovery-arrow {
+  font-size: 2rem;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  font-weight: 900;
+  color: var(--neo-black);
+}
+
+.chart-note {
+  background-color: var(--neo-yellow);
+  color: var(--neo-black);
+  padding: 8px 15px;
+  border: var(--border-thin);
+  font-weight: 900;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+/* Ethics Principles Visual */
+.amazon-logo-container {
+  margin: 10px 0;
+}
+
+.amazon-logo {
+  max-height: 80px;
+  border: var(--border-thin);
+  box-shadow: var(--shadow-small);
+}
+
+.bias-illustration {
+  margin-top: 15px;
+}
+
+.bias-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+.biased {
+  background-color: var(--neo-pink);
+  padding: 8px 12px;
+  border: var(--border-thin);
+}
+
+.fair {
+  background-color: var(--neo-green);
+  padding: 8px 12px;
+  border: var(--border-thin);
+}
+
 /* Case Study Styles - Fixed */
 .case-study-card {
   background-color: var(--neo-green);
@@ -1256,6 +1485,38 @@ body {
   .description-box {
     transform: none;
   }
+
+  .case-study-image {
+    max-height: 150px;
+  }
+
+  .icon-row {
+    font-size: 1.2rem;
+    gap: 8px;
+  }
+
+  .culture-flags {
+    font-size: 1.5rem;
+    gap: 10px;
+  }
+
+  .data-flow-diagram {
+    gap: 8px;
+  }
+
+  .flow-step {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  .price-line {
+    gap: 10px;
+    font-size: 1.2rem;
+  }
+
+  .timeline {
+    font-size: 0.7rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1294,6 +1555,44 @@ body {
   .importance-note {
     font-size: 1rem;
     padding: 15px;
+  }
+
+  .case-study-visual {
+    padding: 15px;
+  }
+
+  .case-study-image {
+    max-height: 120px;
+  }
+
+  .icon-row {
+    font-size: 1rem;
+    gap: 5px;
+  }
+
+  .culture-flags {
+    font-size: 1.2rem;
+    gap: 8px;
+  }
+
+  .data-flow-diagram {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .warning-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .bias-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .price-line {
+    gap: 8px;
+    font-size: 1rem;
   }
 }
 

@@ -1,4 +1,4 @@
-// AI Ethics Lab - Simplified and Fixed JavaScript
+// AI Ethics Lab - Fixed JavaScript with Working Case Study Expansion
 
 let currentPage = 'landing-page';
 
@@ -35,6 +35,7 @@ function setupTopicCardListeners() {
         // Add click listener to entire card
         card.addEventListener('click', function(e) {
             e.preventDefault();
+            e.stopPropagation();
             console.log('Topic card clicked:', topicId);
             navigateToTopic(topicId);
         });
@@ -55,29 +56,38 @@ function setupTopicCardListeners() {
 function setupBackButtonListeners() {
     console.log('Setting up back button listeners...');
     
-    const backButtons = document.querySelectorAll('.back-btn');
-    console.log('Found back buttons:', backButtons.length);
-    
-    backButtons.forEach(btn => {
-        btn.addEventListener('click', function(e) {
+    // Use event delegation to handle all back buttons
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('back-btn') || e.target.closest('.back-btn')) {
             e.preventDefault();
-            console.log('Back button clicked');
+            e.stopPropagation();
+            console.log('Back button clicked via delegation');
             navigateToHome();
-        });
+            return false;
+        }
     });
 }
 
 function setupCaseStudyListeners() {
     console.log('Setting up case study listeners...');
     
+    // Get all case study cards on the current page
     const caseStudyCards = document.querySelectorAll('.case-study-card');
     console.log('Found case study cards:', caseStudyCards.length);
     
-    caseStudyCards.forEach(card => {
-        card.addEventListener('click', function(e) {
+    caseStudyCards.forEach((card, index) => {
+        console.log('Setting up case study listener', index);
+        
+        // Remove any existing event listeners by cloning
+        const newCard = card.cloneNode(true);
+        card.parentNode.replaceChild(newCard, card);
+        
+        // Add click listener to the new card
+        newCard.addEventListener('click', function(e) {
             e.preventDefault();
-            console.log('Case study clicked');
-            toggleCaseStudy(card);
+            e.stopPropagation();
+            console.log('Case study clicked:', index);
+            toggleCaseStudy(newCard);
         });
     });
 }
@@ -107,6 +117,11 @@ function navigateToTopic(topicId) {
     // Scroll to top
     window.scrollTo(0, 0);
     
+    // Set up case study listeners for the new page after a short delay
+    setTimeout(() => {
+        setupCaseStudyListeners();
+    }, 200);
+    
     console.log('Successfully navigated to:', topicId);
 }
 
@@ -120,14 +135,22 @@ function navigateToHome() {
     // Scroll to top
     window.scrollTo(0, 0);
     
+    // Re-setup topic card listeners
+    setTimeout(() => {
+        setupTopicCardListeners();
+    }, 100);
+    
     console.log('Successfully navigated to home');
 }
 
 function hideAllPages() {
+    console.log('Hiding all pages...');
     const pages = document.querySelectorAll('.page');
     pages.forEach(page => {
         page.classList.remove('active');
         page.style.display = 'none';
+        page.style.opacity = '';
+        page.style.transition = '';
     });
 }
 
@@ -160,6 +183,7 @@ function toggleCaseStudy(card) {
     
     if (!content || !indicator) {
         console.error('Case study elements not found');
+        console.log('Card HTML:', card.innerHTML);
         return;
     }
     
@@ -190,7 +214,7 @@ function toggleCaseStudy(card) {
         setTimeout(() => {
             content.classList.add('hidden');
             content.style.display = 'none';
-            indicator.textContent = 'CLICK TO READ';
+            indicator.textContent = 'CLICK TO read';
             card.classList.remove('expanded');
             content.style.transition = '';
             content.style.opacity = '';
@@ -199,7 +223,7 @@ function toggleCaseStudy(card) {
 }
 
 function setupButtonEffects() {
-    // Add press effects to buttons
+    // Add press effects to buttons using event delegation
     document.addEventListener('mousedown', function(e) {
         const button = e.target.closest('.explore-btn, .back-btn');
         if (button) {
@@ -218,24 +242,27 @@ function setupButtonEffects() {
         }
     });
     
-    // Add hover effects to topic cards
-    const topicCards = document.querySelectorAll('.topic-card');
-    topicCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
+    // Add hover effects to topic cards using event delegation
+    document.addEventListener('mouseenter', function(e) {
+        const card = e.target.closest('.topic-card');
+        if (card) {
             const icon = card.querySelector('.card-icon');
             if (icon) {
                 icon.style.transition = 'transform 0.3s ease';
                 icon.style.transform = 'scale(1.2) rotate(10deg)';
             }
-        });
-        
-        card.addEventListener('mouseleave', function() {
+        }
+    }, true);
+    
+    document.addEventListener('mouseleave', function(e) {
+        const card = e.target.closest('.topic-card');
+        if (card) {
             const icon = card.querySelector('.card-icon');
             if (icon) {
                 icon.style.transform = 'scale(1) rotate(0deg)';
             }
-        });
-    });
+        }
+    }, true);
 }
 
 // Debug functions for testing
@@ -256,6 +283,16 @@ window.testNavigation = function(topicId) {
 window.testHome = function() {
     console.log('Testing navigation to home');
     navigateToHome();
+};
+
+window.testCaseStudy = function() {
+    console.log('Testing case study toggle');
+    const caseStudyCard = document.querySelector('.case-study-card');
+    if (caseStudyCard) {
+        toggleCaseStudy(caseStudyCard);
+    } else {
+        console.log('No case study card found');
+    }
 };
 
 // Add keyboard support
