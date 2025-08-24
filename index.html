@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI ETHICS LAB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Landing Page -->
+        <div id="landing-page" class="page active">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h1 class="main-title">AI ETHICS LAB</h1>
+                    <div class="subtitle-box">
+                        <p class="subtitle">Learn Essential Ethical Issues in AI</p>
+                    </div>
+                    <div class="description-box">
+                        <p>Artificial Intelligence is transforming our world, but with great power comes great responsibility. Understanding AI ethics isn't just for developers - it affects everyone. Explore the key ethical challenges we face as AI becomes part of our daily lives.</p>
+                    </div>
+                    <div class="decorative-shapes">
+                        <div class="shape shape-1"></div>
+                        <div class="shape shape-2"></div>
+                        <div class="shape shape-3"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="topics-grid">
+                <div class="topic-card" data-topic="ethics-vs-morals">
+                    <div class="card-header">
+                        <h3>ETHICS vs MORALS</h3>
+                        <div class="card-icon">🤔</div>
+                    </div>
+                    <p>What's the difference and why it matters in AI</p>
+                    <button class="explore-btn">EXPLORE →</button>
+                </div>
+
+                <div class="topic-card" data-topic="data-privacy">
+                    <div class="card-header">
+                        <h3>DATA & PRIVACY</h3>
+                        <div class="card-icon">🔒</div>
+                    </div>
+                    <p>How AI collects, uses, and protects personal information</p>
+                    <button class="explore-btn">EXPLORE →</button>
+                </div>
+
+                <div class="topic-card" data-topic="misinformation">
+                    <div class="card-header">
+                        <h3>MISINFORMATION</h3>
+                        <div class="card-icon">📺</div>
+                    </div>
+                    <p>AI's role in creating and spreading false information</p>
+                    <button class="explore-btn">EXPLORE →</button>
+                </div>
+
+                <div class="topic-card" data-topic="loss-of-control">
+                    <div class="card-header">
+                        <h3>LOSS OF CONTROL</h3>
+                        <div class="card-icon">⚡</div>
+                    </div>
+                    <p>When AI systems act beyond human oversight</p>
+                    <button class="explore-btn">EXPLORE →</button>
+                </div>
+
+                <div class="topic-card" data-topic="ethics-principles">
+                    <div class="card-header">
+                        <h3>ETHICS PRINCIPLES</h3>
+                        <div class="card-icon">⚖️</div>
+                    </div>
+                    <p>Core principles: Human Rights, Bias, Privacy, and Inclusion</p>
+                    <button class="explore-btn">EXPLORE →</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ethics vs Morals Topic Page -->
+        <div id="ethics-vs-morals" class="page topic-page">
+            <div class="topic-header">
+                <button class="back-btn">← BACK TO HOME</button>
+                <h1>ETHICS vs MORALS</h1>
+            </div>
+            
+            <div class="content-container">
+                <div class="explanation-section">
+                    <div class="content-box">
+                        <h2>WHAT'S THE DIFFERENCE?</h2>
+                        <p>Ethics are agreed-upon rules about right and wrong behavior created by groups or society. Morals are your personal beliefs about what's right and wrong. In AI, this difference matters because AI systems must follow consistent ethical standards, even when people have different moral beliefs.</p>
+                        <div class="importance-note">
+                            <strong>Why It Matters:</strong> AI systems are used globally by billions of people with different moral beliefs. We need shared ethical standards to ensure AI serves everyone fairly.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-study-section">
+                    <div class="case-study-card">
+                        <div class="case-study-header">
+                            <h3>📱 CASE STUDY</h3>
+                            <span class="toggle-indicator">CLICK TO READ</span>
+                        </div>
+                        <h4>Facebook's Content Moderation Challenge</h4>
+                        <div class="case-study-content hidden">
+                            <p><strong>Scenario:</strong> Facebook uses AI to moderate billions of posts daily from users worldwide. The challenge: Should AI follow universal ethical standards or respect individual moral beliefs?</p>
+                            <p><strong>Problem:</strong> Different cultures have different moral views on acceptable content. Some cultures are more conservative about certain topics, while others are more liberal.</p>
+                            <p><strong>Solution:</strong> Facebook developed community standards (ethical rules) that apply globally, while allowing some regional variations. The AI follows these ethical guidelines consistently.</p>
+                            <p><strong>Lesson:</strong> Global AI systems need clear ethical frameworks that can work across different moral belief systems.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data & Privacy Topic Page -->
+        <div id="data-privacy" class="page topic-page">
+            <div class="topic-header">
+                <button class="back-btn">← BACK TO HOME</button>
+                <h1>DATA & PRIVACY</h1>
+            </div>
+            
+            <div class="content-container">
+                <div class="explanation-section">
+                    <div class="content-box">
+                        <h2>YOUR DATA, YOUR PRIVACY</h2>
+                        <p>AI systems need vast amounts of data to learn and make decisions. This data often includes personal information about users. Privacy means having control over who accesses your personal information and how it's used. The challenge is balancing AI's need for data with protecting people's privacy rights.</p>
+                        <div class="importance-note">
+                            <strong>Why It Matters:</strong> Your personal data reveals intimate details about your life - from health conditions to political beliefs. Without privacy protection, this information can be misused to manipulate or discriminate against you.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-study-section">
+                    <div class="case-study-card">
+                        <div class="case-study-header">
+                            <h3>🔍 CASE STUDY</h3>
+                            <span class="toggle-indicator">CLICK TO READ</span>
+                        </div>
+                        <h4>Cambridge Analytica Scandal (2016)</h4>
+                        <div class="case-study-content hidden">
+                            <p><strong>Scenario:</strong> Cambridge Analytica harvested personal data from 87 million Facebook users without their consent to influence political elections.</p>
+                            <p><strong>Problem:</strong> The company created psychological profiles using AI to target voters with personalized political ads designed to influence their voting behavior.</p>
+                            <p><strong>Impact:</strong> This violation of privacy potentially affected democratic elections and showed how personal data can be weaponized for political manipulation.</p>
+                            <p><strong>Consequence:</strong> Facebook was fined $5 billion, and new privacy regulations like GDPR were strengthened worldwide.</p>
+                            <p><strong>Lesson:</strong> AI companies must obtain clear consent before using personal data and be transparent about how they use it.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Misinformation Topic Page -->
+        <div id="misinformation" class="page topic-page">
+            <div class="topic-header">
+                <button class="back-btn">← BACK TO HOME</button>
+                <h1>DISINFORMATION & MISINFORMATION</h1>
+            </div>
+            
+            <div class="content-container">
+                <div class="explanation-section">
+                    <div class="content-box">
+                        <h2>AI-GENERATED FAKE CONTENT</h2>
+                        <p>Misinformation is false information spread without harmful intent. Disinformation is false information deliberately created to deceive. AI can both create realistic fake content (deepfakes, fake articles) and help spread false information quickly across platforms through recommendation algorithms.</p>
+                        <div class="importance-note">
+                            <strong>Why It Matters:</strong> False information can influence elections, cause health crises, incite violence, and undermine trust in institutions. When AI makes fake content look real, it becomes much harder to distinguish truth from lies.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-study-section">
+                    <div class="case-study-card">
+                        <div class="case-study-header">
+                            <h3>🎭 CASE STUDY</h3>
+                            <span class="toggle-indicator">CLICK TO READ</span>
+                        </div>
+                        <h4>Deepfake Video of Ukrainian President (2022)</h4>
+                        <div class="case-study-content hidden">
+                            <p><strong>Scenario:</strong> During the Russia-Ukraine war, a deepfake video appeared showing President Zelensky telling Ukrainian soldiers to surrender.</p>
+                            <p><strong>Problem:</strong> The AI-generated video looked somewhat realistic and spread quickly on social media before fact-checkers could respond.</p>
+                            <p><strong>Impact:</strong> Though the video had obvious flaws, it demonstrated how AI can create convincing fake content about world leaders during critical moments.</p>
+                            <p><strong>Response:</strong> Social media platforms quickly removed the video and added warning labels, but not before it had been viewed by millions.</p>
+                            <p><strong>Lesson:</strong> We need better tools to detect AI-generated content and media literacy education to help people identify deepfakes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loss of Control Topic Page -->
+        <div id="loss-of-control" class="page topic-page">
+            <div class="topic-header">
+                <button class="back-btn">← BACK TO HOME</button>
+                <h1>LOSS OF CONTROL</h1>
+            </div>
+            
+            <div class="content-container">
+                <div class="explanation-section">
+                    <div class="content-box">
+                        <h2>WHEN AI ACTS BEYOND HUMAN OVERSIGHT</h2>
+                        <p>Loss of control happens when AI systems make decisions or take actions that humans didn't intend, can't predict, or can't stop in time. This occurs when AI systems become so fast or complex that human oversight becomes impossible, or when they develop unexpected behaviors.</p>
+                        <div class="importance-note">
+                            <strong>Why It Matters:</strong> If we can't control AI systems, they might solve problems in ways that harm people or make decisions that contradict human values. As AI becomes more powerful, the consequences of losing control become more severe.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-study-section">
+                    <div class="case-study-card">
+                        <div class="case-study-header">
+                            <h3>📈 CASE STUDY</h3>
+                            <span class="toggle-indicator">CLICK TO READ</span>
+                        </div>
+                        <h4>2010 Flash Crash</h4>
+                        <div class="case-study-content hidden">
+                            <p><strong>Scenario:</strong> AI trading algorithms caused the U.S. stock market to crash in just 36 minutes, wiping out $1 trillion in value.</p>
+                            <p><strong>Problem:</strong> High-frequency trading algorithms began selling stocks rapidly, which triggered other algorithms to sell even faster, creating a downward spiral.</p>
+                            <p><strong>Impact:</strong> The algorithms were trading so fast that human traders couldn't understand what was happening or intervene in time to stop the crash.</p>
+                            <p><strong>Recovery:</strong> The market recovered within hours, but it showed how AI systems can spiral out of control when they interact with each other.</p>
+                            <p><strong>Lesson:</strong> We need circuit breakers and human oversight systems to maintain control over AI, especially in critical systems.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ethics Principles Topic Page -->
+        <div id="ethics-principles" class="page topic-page">
+            <div class="topic-header">
+                <button class="back-btn">← BACK TO HOME</button>
+                <h1>ETHICS PRINCIPLES</h1>
+            </div>
+            
+            <div class="content-container">
+                <div class="explanation-section">
+                    <div class="content-box">
+                        <h2>THE FOUR PILLARS</h2>
+                        <p>AI ethics is built on key principles: <strong>Human Rights</strong> (AI should respect basic freedoms), <strong>Fairness</strong> (AI should treat all people equally), <strong>Privacy</strong> (AI should protect personal information), and <strong>Inclusion</strong> (AI should work for everyone, not just privileged groups).</p>
+                        <div class="importance-note">
+                            <strong>Why It Matters:</strong> These principles ensure AI development serves humanity's best interests and doesn't perpetuate or amplify existing social inequalities and injustices.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-study-section">
+                    <div class="case-study-card">
+                        <div class="case-study-header">
+                            <h3>💼 CASE STUDY</h3>
+                            <span class="toggle-indicator">CLICK TO READ</span>
+                        </div>
+                        <h4>Amazon's Biased Hiring AI (2018)</h4>
+                        <div class="case-study-content hidden">
+                            <p><strong>Scenario:</strong> Amazon developed an AI system to screen job candidates, but discovered it was systematically discriminating against women.</p>
+                            <p><strong>Problem:</strong> The AI was trained on historical hiring data from a male-dominated tech industry, so it learned to prefer male candidates over equally qualified female candidates.</p>
+                            <p><strong>Discovery:</strong> The system penalized resumes containing words like 'women's chess club' and downgraded graduates from all-women's colleges.</p>
+                            <p><strong>Response:</strong> Amazon scrapped the entire system when they realized the bias couldn't be easily fixed.</p>
+                            <p><strong>Lesson:</strong> AI systems can perpetuate historical discrimination unless we actively design them to be fair and inclusive.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
