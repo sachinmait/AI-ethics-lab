@@ -854,51 +854,6 @@ body {
   margin: 0;
 }
 
-/* Decorative Shapes */
-.decorative-shapes {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.shape {
-  position: absolute;
-  border: var(--border-medium);
-}
-
-.shape-1 {
-  width: 80px;
-  height: 80px;
-  background-color: var(--neo-pink);
-  top: 10%;
-  left: 10%;
-  transform: rotate(45deg);
-  box-shadow: var(--shadow-small);
-}
-
-.shape-2 {
-  width: 60px;
-  height: 100px;
-  background-color: var(--neo-blue);
-  top: 20%;
-  right: 15%;
-  transform: rotate(-15deg);
-  box-shadow: var(--shadow-small);
-}
-
-.shape-3 {
-  width: 100px;
-  height: 60px;
-  background-color: var(--neo-green);
-  bottom: 10%;
-  left: 20%;
-  transform: rotate(30deg);
-  box-shadow: var(--shadow-small);
-}
 
 /* Topics Grid */
 .topics-grid {
